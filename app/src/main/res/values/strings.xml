@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LintDemo</string>
+    <string-array name="arr">
+        <item>app1</item>
+        <item>app2</item>
+    </string-array>
+</resources>
