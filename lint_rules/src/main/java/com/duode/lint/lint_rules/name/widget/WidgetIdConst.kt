@@ -55,7 +55,7 @@ object WidgetIdConst {
     /**
      * BUTTON的简称以及在xml布局中的根标签的名字
      * */
-    const val BUTTON_ID = "BUTTON"
+    const val BUTTON_ID = "Button"
     const val BUTTON_SHORT_NAME = "btn"
 
     /**
@@ -115,7 +115,7 @@ object WidgetIdConst {
     /**
      * VIEW的简称以及在xml布局中的根标签的名字
      * */
-    const val VIEW_ID = "VIEW"
+    const val VIEW_ID = "View"
     const val VIEW_SHORT_NAME = "view"
 
     /**
@@ -139,8 +139,8 @@ object WidgetIdConst {
     /**
      * RecyclerView的简称以及在xml布局中的根标签的名字
      * */
-    const val RecyclerView_ID = "RecyclerView"
-    const val RecyclerView_SHORT_NAME = "rv"
+    const val RECYCLERVIEW_ID = "RecyclerView"
+    const val RECYCLERVIEW_SHORT_NAME = "rv"
 
     /**
      * GridView的简称以及在xml布局中的根标签的名字

@@ -141,8 +141,8 @@ class WidgetIdDetector : Detector(), XmlScanner {
                 isEndWith = idName.endsWith(WidgetIdConst.HORIZONTALSCROLLVIEW_SHORT_NAME)
             }
 
-            WidgetIdConst.RecyclerView_ID -> {
-                isEndWith = idName.endsWith(WidgetIdConst.RecyclerView_SHORT_NAME)
+            WidgetIdConst.RECYCLERVIEW_ID -> {
+                isEndWith = idName.endsWith(WidgetIdConst.RECYCLERVIEW_SHORT_NAME)
             }
 
             /**
