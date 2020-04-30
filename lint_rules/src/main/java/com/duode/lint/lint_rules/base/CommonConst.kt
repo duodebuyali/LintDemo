@@ -32,7 +32,18 @@ object CommonConst {
 
 
     /**
-     * 一般用这个来日志的tag，虽然不是常量但是以其命名方式命名
+     * 一般用这个来最为日志的tag，虽然不是常量但是以其命名方式命名
      * */
     const val TAG_NAME = "TAG"
+
+    /**
+     * kotlin语言的id
+     * */
+    const val LANGUAGE_KOTLIN_ID = "kotlin"
+
+    /**
+     * 常量的前缀描述和注解
+     * */
+    const val CONSTANT_PREFIX = "const"
+    const val CONSTANT_ANNOTATION = "@JvmStatic"
 }

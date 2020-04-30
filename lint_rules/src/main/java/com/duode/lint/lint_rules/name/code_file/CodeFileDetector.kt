@@ -4,6 +4,7 @@ import com.android.tools.lint.client.api.UElementHandler
 import com.android.tools.lint.detector.api.*
 import com.duode.lint.lint_rules.base.CommonConst
 import com.duode.lint.lint_rules.base.CommonStringUtils
+import com.intellij.psi.PsiClass
 import org.apache.http.util.TextUtils
 import org.jetbrains.uast.UClass
 import org.jetbrains.uast.UElement
@@ -65,7 +66,7 @@ class CodeFileDetector : Detector(), Detector.UastScanner {
 
             //确认类名是否符合规范
             if (isRightCodeFileName) {
-                checkClassName(classFullName, fileName, node)
+                checkInnerClass(classFullName, fileName, node)
             }
 
         }
@@ -74,7 +75,7 @@ class CodeFileDetector : Detector(), Detector.UastScanner {
          * 对类名进行校验
          * @return 返回true表示通过校验
          * */
-        private fun checkClassName(
+        private fun checkInnerClass(
             classFullName: String,
             codeFileName: String,
             node: UClass
@@ -88,8 +89,15 @@ class CodeFileDetector : Detector(), Detector.UastScanner {
             if (name == className) {
                 return true
             }
+            //顶层类名
+            var superClassName = ""
+            //可能是嵌套了多层
+            var curNode: PsiClass = node
+            while (curNode.containingClass != null) {
+                curNode = curNode.containingClass!!
+                superClassName = curNode.name ?: ""
+            }
             //先判断是否是内部类
-            val superClassName = node.containingClass?.name ?: ""
             if (superClassName == name) {
                 return true
             }
@@ -97,7 +105,7 @@ class CodeFileDetector : Detector(), Detector.UastScanner {
                 ISSUE,
                 node,
                 context.getLocation(node.javaPsi),
-                CodeFileConst.CLASS_NAME_RULE
+                CodeFileConst.INNER_CLASS_RULE
             )
             return false
         }

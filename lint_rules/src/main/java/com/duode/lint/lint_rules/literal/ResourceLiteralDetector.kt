@@ -70,10 +70,6 @@ class ResourceLiteralDetector : Detector(), XmlScanner {
         if (SdkConstants.ANDROID_URI != attribute.namespaceURI) {
             return
         }
-        /*
-
-        *
-        * */
 
         //检验size,radius,angle
         if (name.endsWith(SdkConstants.ATTR_TEXT_SIZE) ||

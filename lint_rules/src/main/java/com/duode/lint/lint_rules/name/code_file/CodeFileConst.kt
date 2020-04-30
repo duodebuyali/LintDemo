@@ -23,5 +23,6 @@ object CodeFileConst {
 
     const val PACKAGE_NAME_RULE = "包名不能包含大写"
     const val CODEFILE_NAME_RULE = "文件名必须使用大驼峰式命名"
-    const val CLASS_NAME_RULE = "非内部类，必须单独使用一个文件且命名和文件名一致"
+    const val INNER_CLASS_RULE = "非内部类，必须单独使用一个文件且命名和文件名一致"
+
 }

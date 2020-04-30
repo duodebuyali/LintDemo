@@ -34,6 +34,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //实现自定义lint规则的依赖
-    implementation 'com.github.duodebuyali:LintDemo:master-SNAPSHOT'
-//    implementation project(":lint_lib")
+//    implementation 'com.github.duodebuyali:LintDemo:master-SNAPSHOT'
+    implementation project(":lint_lib")
 }

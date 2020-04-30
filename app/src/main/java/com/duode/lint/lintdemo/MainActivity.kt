@@ -1,17 +1,34 @@
+/*
+* xxxxx
+* xxxxx
+* xxxxx
+* */
 package com.duode.lint.lintdemo
 
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
+/**
+ * xxxxx
+ * xxxxx
+ * */
 class MainActivity : AppCompatActivity() {
 
     private val hello = "你好"
+    val t: String = ""
+
+    companion object {
+        @JvmStatic
+        val a: String = ""
+
+        const val b: String = ""
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val m: String = ""
 
         Log.v("MainActivity", "xx")
 
@@ -50,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         testA()
     }
 
-//    private fun print(message: Any?) {
+    //    private fun print(message: Any?) {
 //
 //    }
     private fun println(message: Any?) {
