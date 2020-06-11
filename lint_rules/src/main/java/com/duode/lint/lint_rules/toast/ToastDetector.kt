@@ -11,6 +11,7 @@ import org.jetbrains.uast.UCallExpression
  * @Author: hekang
  * @CreateDate: 2019-10-18 18:37
  */
+@Suppress("UnstableApiUsage")
 class ToastDetector : Detector(), Detector.UastScanner {
 
     companion object {

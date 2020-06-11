@@ -11,6 +11,7 @@ import com.duode.lint.lint_rules.name.code_file.FileHeadDetector
 import com.duode.lint.lint_rules.name.member.MemberDetector
 import com.duode.lint.lint_rules.name.method.MethodDetector
 import com.duode.lint.lint_rules.name.widget.WidgetIdDetector
+import com.duode.lint.lint_rules.others.condition.IfStateDetector
 import com.duode.lint.lint_rules.toast.ToastDetector
 
 /**
@@ -34,6 +35,8 @@ class CustomIssueRegistry : IssueRegistry() {
             MethodDetector.ISSUE,
             CodeChineseDetector.ISSUE,
             ResourceLiteralDetector.ISSUE,
+//            ImportStateDetector.ISSUE,
+            IfStateDetector.ISSUE,
             FileHeadDetector.ISSUE
         )
 

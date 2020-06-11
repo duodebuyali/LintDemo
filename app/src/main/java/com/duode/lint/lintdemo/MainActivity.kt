@@ -9,6 +9,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.ActionBar
+import java.util.*
+
 /**
  * xxxxx
  * xxxxx
@@ -78,8 +81,9 @@ class MainActivity : AppCompatActivity() {
         testB()
     }
 
-    fun testB() {
-
+    fun testB(): ArrayList<String> {
+        emptyArray<String>()
+        return ArrayList<String>()
     }
 
     fun testC() {
@@ -91,6 +95,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun AtestC() {
+        if (false) 1 else 0
+
+        if (true) {
+            2
+        }
 
     }
 
